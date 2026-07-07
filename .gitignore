@@ -1,0 +1,29 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (if you later add tooling e.g. live-server, sass, linters)
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Build output (if you later add a bundler)
+dist/
+build/
+
+# Environment / secrets (if a backend is added later)
+.env
+.env.local
+
+# Logs
+*.log
+
+# Local screenshots you don't want tracked (keep only curated ones in /screenshots)
+*.tmp

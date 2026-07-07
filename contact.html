@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us | Smart Dine</title>
+<meta name="description" content="Get in touch with Smart Dine — address, phone, business hours, map and contact form." />
+<link rel="icon" href="images/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="loader"><div class="loader-plate"></div></div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">S</span> Smart Dine</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="booking.html">Book Table</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="booking.html" class="btn btn-primary" style="padding:12px 22px;">Reserve</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <p class="eyebrow" style="justify-content:center;">Reach Us</p>
+      <h1>Contact Smart Dine</h1>
+      <p class="breadcrumb"><a href="index.html">Home</a> / <span>Contact</span></p>
+    </div>
+  </section>
+
+  <section style="padding-top:60px;">
+    <div class="container contact-grid">
+
+      <!-- Info + map -->
+      <div class="info-card">
+        <h3>Visit or Reach Us</h3>
+        <ul class="info-list">
+          <li>
+            <span class="info-icon">📍</span>
+            <div><strong>Address</strong><span>4th Cross Street, Fairlands, Salem, Tamil Nadu 636016</span></div>
+          </li>
+          <li>
+            <span class="info-icon">📞</span>
+            <div><strong>Phone</strong><span>+91 98765 43210</span></div>
+          </li>
+          <li>
+            <span class="info-icon">✉️</span>
+            <div><strong>Email</strong><span>hello@smartdine.example</span></div>
+          </li>
+          <li>
+            <span class="info-icon">🕒</span>
+            <div><strong>Business Hours</strong><span>Mon–Fri: 11:00–23:00 &nbsp;|&nbsp; Sat–Sun: 10:00–23:30</span></div>
+          </li>
+        </ul>
+
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps?q=Salem%20Tamil%20Nadu&output=embed"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Smart Dine location map">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <div class="booking-card">
+        <h3 style="margin-bottom:26px; font-size:1.5rem;">Send us a Message</h3>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group" id="group-cname">
+              <label for="cName">Your Name <span class="req">*</span></label>
+              <input type="text" id="cName" placeholder="e.g. Hasini Kumar" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="form-group" id="group-cemail">
+              <label for="cEmail">Email Address <span class="req">*</span></label>
+              <input type="email" id="cEmail" placeholder="you@example.com" required>
+              <span class="error-msg"></span>
+            </div>
+          </div>
+          <div class="form-group" id="group-csubject">
+            <label for="cSubject">Subject</label>
+            <input type="text" id="cSubject" placeholder="Table for an event, feedback, catering...">
+          </div>
+          <div class="form-group" id="group-cmessage">
+            <label for="cMessage">Message <span class="req">*</span></label>
+            <textarea id="cMessage" placeholder="Tell us how we can help..." required></textarea>
+            <span class="error-msg"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          <p class="form-status" id="contactStatus"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="color:#f0e2cf;"><span class="brand-mark">S</span> Smart Dine</a>
+        <p>A modern neighbourhood restaurant serving seasonal Indian & continental plates, seven days a week.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">X</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="booking.html">Book Table</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul><li>Mon–Fri: 11:00 – 23:00</li><li>Sat–Sun: 10:00 – 23:30</li><li>Kitchen closes 30 min prior</li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul><li>4th Cross Street, Salem, TN</li><li>+91 98765 43210</li><li>hello@smartdine.example</li></ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Smart Dine. All rights reserved.</span>
+      <span>Built with HTML, CSS & JavaScript.</span>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+  <script src="js/script.js"></script>
+</body>
+</html>

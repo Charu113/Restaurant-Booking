@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a7ca8"/>
+      <stop offset="100%" stop-color="#204a63"/>
+    </linearGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2" fill="rgba(255,255,255,0.10)"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="440" fill="url(#g)"/>
+  <rect width="600" height="440" fill="url(#dots)"/>
+  <circle cx="530" cy="70" r="130" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="60" cy="390" r="110" fill="rgba(0,0,0,0.08)"/>
+  <text x="50%" y="47%" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="40" font-weight="700" fill="#ffffff">Filter Coffee</text>
+  <text x="50%" y="60%" text-anchor="middle" font-family="Verdana, sans-serif"
+        font-size="20" letter-spacing="2" fill="rgba(255,255,255,0.85)">DRINKS</text>
+</svg>

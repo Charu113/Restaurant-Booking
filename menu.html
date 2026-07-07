@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Menu | Smart Dine</title>
+<meta name="description" content="Browse the full Smart Dine menu — veg, non-veg, drinks and desserts, with search and category filters." />
+<link rel="icon" href="images/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="loader"><div class="loader-plate"></div></div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">S</span> Smart Dine</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="booking.html">Book Table</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="booking.html" class="btn btn-primary" style="padding:12px 22px;">Reserve</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <p class="eyebrow" style="justify-content:center;">The Full Spread</p>
+      <h1>Our Menu</h1>
+      <p class="breadcrumb"><a href="index.html">Home</a> / <span>Menu</span></p>
+    </div>
+  </section>
+
+  <section style="padding-top:60px;">
+    <div class="container">
+
+      <div class="menu-toolbar">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" id="menuSearch" placeholder="Search dishes, e.g. paneer, mojito..." />
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="veg">Veg</button>
+          <button class="filter-tab" data-filter="nonveg">Non-Veg</button>
+          <button class="filter-tab" data-filter="drinks">Drinks</button>
+          <button class="filter-tab" data-filter="dessert">Desserts</button>
+        </div>
+      </div>
+
+      <div class="menu-grid">
+
+        <!-- VEG -->
+        <article class="dish-card" data-category="veg" data-name="Paneer Tikka">
+          <div class="dish-media"><img src="images/foods/paneer-tikka.svg" alt="Paneer Tikka" loading="lazy"><span class="dish-tag tag-veg">Veg</span></div>
+          <div class="dish-body"><div class="dish-title-row"><h3>Paneer Tikka</h3><span class="dish-price">₹249</span></div><p>Char-grilled cottage cheese marinated in smoked yogurt and spice.</p></div>
+        </article>
+
+        <article class="dish-card" data-category="veg" data-name="Dal Makhani">
+          <div class="dish-media"><img src="images/foods/dal-makhani.svg" alt="Dal Makhani" loading="lazy"><span class="dish-tag tag-veg">Veg</span></div>
+          <div class="dish-body"><div class="dish-title-row"><h3>Dal Makhani</h3><span class="dish-price">₹219</span></div><p>Black lentils, slow-simmered overnight with butter and cream.</p></div>
+        </article>
+
+        <article class="dish-card" data-category="veg" data-name="Veg Biryani">
+          <div class="dish-media"><img src="images/foods/veg-biryani.svg" alt="Vegetable Biryani" loading="lazy"><span class="dish-tag tag-veg">Veg</span></div>
+          <div class="dish-body"><div class="dish-title-row"><h3>Vegetable Biryani</h3><span class="dish-price">₹259</span></div><p>Fragrant basmati layered with roasted vegetables and saffron.</p></div>
+        </article>
+
+        <!-- NON-VEG -->
+        <article class="dish-card" data-category="nonveg" data-name="Butter Chicken">
+          <div class="dish-media"><img src="images/foods/butter-chicken.svg" alt="Butter Chicken" loading="lazy"><span class="dish-tag tag-nonveg">Non-Veg</span></div>
+          <div class="dish-body"><div class="dish-title-row"><h3>Butter Chicken</h3><span class="dish-price">₹329</span></div><p>Slow-simmered tomato gravy, tandoor chicken, a whisper of cream.</p></div>
+        </article>
+
+        <article class="dish-card" data-category="nonveg" data-name="Mutton Rogan Josh">
+          <div class="dish-media"><img src="images/foods/mutton-rogan-josh.svg" alt="Mutton Rogan Josh" loading="lazy"><span class="dish-tag tag-nonveg">Non-Veg</span></div>
+          <div class="dish-body"><div class="dish-title-row"><h3>Mutton Rogan Josh</h3><span class="dish-price">₹399</span></div><p>Kashmiri-style slow-cooked mutton in a fragrant red chilli gravy.</p></div>
+        </article>
+
+        <article class="dish-card" data-category="nonveg" data-name="Grilled Fish Tikka">
+          <div class="dish-media"><img src="images/foods/grilled-fish-tikka.svg" alt="Grilled Fish Tikka" loading="lazy"><span class="dish-tag tag-nonveg">Non-Veg</span></div>
+          <div class="dish-body"><div class="dish-title-row"><h3>Grilled Fish Tikka</h3><span class="dish-price">₹349</span></div><p>River fish marinated in carom and mustard, char-grilled to order.</p></div>
+        </article>
+
+        <!-- DRINKS -->
+        <article class="dish-card" data-category="drinks" data-name="Virgin Mojito">
+          <div class="dish-media"><img src="images/foods/virgin-mojito.svg" alt="Virgin Mojito" loading="lazy"><span class="dish-tag tag-drinks">Drinks</span></div>
+          <div class="dish-body"><div class="dish-title-row"><h3>Virgin Mojito</h3><span class="dish-price">₹149</span></div><p>Fresh mint, lime and soda over crushed ice — bright and clean.</p></div>
+        </article>
+
+        <article class="dish-card" data-category="drinks" data-name="Masala Chaas">
+          <div class="dish-media"><img src="images/foods/masala-chaas.svg" alt="Masala Chaas" loading="lazy"><span class="dish-tag tag-drinks">Drinks</span></div>
+          <div class="dish-body"><div class="dish-title-row"><h3>Masala Chaas</h3><span class="dish-price">₹99</span></div><p>Spiced buttermilk with roasted cumin and fresh curry leaf.</p></div>
+        </article>
+
+        <article class="dish-card" data-category="drinks" data-name="Filter Coffee">
+          <div class="dish-media"><img src="images/foods/filter-coffee.svg" alt="South Indian Filter Coffee" loading="lazy"><span class="dish-tag tag-drinks">Drinks</span></div>
+          <div class="dish-body"><div class="dish-title-row"><h3>South Indian Filter Coffee</h3><span class="dish-price">₹79</span></div><p>Classic decoction coffee, frothed the traditional way.</p></div>
+        </article>
+
+        <!-- DESSERTS -->
+        <article class="dish-card" data-category="dessert" data-name="Chocolate Lava Cake">
+          <div class="dish-media"><img src="images/foods/chocolate-lava.svg" alt="Chocolate Lava Cake" loading="lazy"><span class="dish-tag tag-dessert">Dessert</span></div>
+          <div class="dish-body"><div class="dish-title-row"><h3>Chocolate Lava Cake</h3><span class="dish-price">₹199</span></div><p>Warm dark chocolate cake with a molten centre, vanilla scoop.</p></div>
+        </article>
+
+        <article class="dish-card" data-category="dessert" data-name="Gulab Jamun">
+          <div class="dish-media"><img src="images/foods/gulab-jamun.svg" alt="Gulab Jamun" loading="lazy"><span class="dish-tag tag-dessert">Dessert</span></div>
+          <div class="dish-body"><div class="dish-title-row"><h3>Gulab Jamun</h3><span class="dish-price">₹129</span></div><p>Soft milk-solid dumplings soaked in cardamom-rose syrup.</p></div>
+        </article>
+
+        <article class="dish-card" data-category="dessert" data-name="Tiramisu">
+          <div class="dish-media"><img src="images/foods/tiramisu.svg" alt="Tiramisu" loading="lazy"><span class="dish-tag tag-dessert">Dessert</span></div>
+          <div class="dish-body"><div class="dish-title-row"><h3>Tiramisu</h3><span class="dish-price">₹219</span></div><p>Espresso-soaked layers with mascarpone and cocoa dust.</p></div>
+        </article>
+
+      </div>
+
+      <p class="no-results" id="noResults">No dishes match your search. Try a different keyword or category.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="cta-band">
+      <h3>Found something you like? Grab a table before the evening slots fill up.</h3>
+      <a href="booking.html" class="btn btn-gold">Book a Table</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="color:#f0e2cf;"><span class="brand-mark">S</span> Smart Dine</a>
+        <p>A modern neighbourhood restaurant serving seasonal Indian & continental plates, seven days a week.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">X</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="booking.html">Book Table</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul><li>Mon–Fri: 11:00 – 23:00</li><li>Sat–Sun: 10:00 – 23:30</li><li>Kitchen closes 30 min prior</li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul><li>4th Cross Street, Salem, TN</li><li>+91 98765 43210</li><li>hello@smartdine.example</li></ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Smart Dine. All rights reserved.</span>
+      <span>Built with HTML, CSS & JavaScript.</span>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+  <script src="js/script.js"></script>
+</body>
+</html>

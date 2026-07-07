@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Smart Dine | Fine Dining & Table Reservations</title>
+<meta name="description" content="Smart Dine — a modern restaurant offering seasonal dishes, warm ambience and effortless online table booking." />
+<link rel="icon" href="images/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Loading screen -->
+  <div id="loader"><div class="loader-plate"></div></div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">S</span> Smart Dine
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="booking.html">Book Table</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="booking.html" class="btn btn-primary" style="padding:12px 22px;">Reserve</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Salem's Modern Table</p>
+      <h1>Seasonal plates, <em>slow evenings</em>,<br>and a table always ready.</h1>
+      <p>Smart Dine pairs a chef-led seasonal menu with a warm, unhurried room. Reserve online in under a minute and walk in to a table that's already yours.</p>
+      <div class="hero-cta">
+        <a href="booking.html" class="btn btn-gold">Book a Table</a>
+        <a href="menu.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.35); color:#fff8f0;">View Menu</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>12+</strong><span>Signature Dishes</span></div>
+        <div><strong>4.8★</strong><span>Guest Rating</span></div>
+        <div><strong>10k+</strong><span>Tables Served</span></div>
+      </div>
+    </div>
+    <div class="scroll-cue"><span></span>Scroll</div>
+  </section>
+
+  <!-- About -->
+  <section class="about">
+    <div class="container about-grid">
+      <div class="about-media reveal">
+        <img src="images/about-kitchen.svg" alt="Smart Dine kitchen and dining room" loading="lazy" />
+        <div class="badge"><strong>08</strong><span>Years of Craft</span></div>
+      </div>
+      <div class="about-body reveal">
+        <p class="eyebrow">Our Story</p>
+        <h2>A kitchen built around the produce, not the trend.</h2>
+        <p>Smart Dine started as a single wood-fired grill and a weekly changing chalkboard menu. Today we still buy from the same three farms, still write the menu by hand, and still believe a restaurant's job is to make an ordinary evening feel considered.</p>
+        <p>Every dish on our menu is designed to be defensible — clean technique, honest pricing, and ingredients you can actually taste. No filler, on the plate or on the page.</p>
+        <ul class="about-list">
+          <li>Locally sourced produce</li>
+          <li>Scratch-made daily</li>
+          <li>Indoor & outdoor seating</li>
+          <li>Vegetarian friendly</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured dishes -->
+  <section class="featured">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">From the Menu</p>
+        <h2>Featured Dishes</h2>
+        <p>A handful of the plates guests order again and again — the full menu has twelve and counting.</p>
+      </div>
+
+      <div class="dish-grid">
+        <article class="dish-card reveal">
+          <div class="dish-media">
+            <img src="images/foods/paneer-tikka.svg" alt="Paneer Tikka" loading="lazy" />
+            <span class="dish-tag tag-veg">Veg</span>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row"><h3>Paneer Tikka</h3><span class="dish-price">₹249</span></div>
+            <p>Char-grilled cottage cheese marinated in smoked yogurt and spice.</p>
+          </div>
+        </article>
+
+        <article class="dish-card reveal">
+          <div class="dish-media">
+            <img src="images/foods/butter-chicken.svg" alt="Butter Chicken" loading="lazy" />
+            <span class="dish-tag tag-nonveg">Non-Veg</span>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row"><h3>Butter Chicken</h3><span class="dish-price">₹329</span></div>
+            <p>Slow-simmered tomato gravy, tandoor chicken, a whisper of cream.</p>
+          </div>
+        </article>
+
+        <article class="dish-card reveal">
+          <div class="dish-media">
+            <img src="images/foods/virgin-mojito.svg" alt="Virgin Mojito" loading="lazy" />
+            <span class="dish-tag tag-drinks">Drinks</span>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row"><h3>Virgin Mojito</h3><span class="dish-price">₹149</span></div>
+            <p>Fresh mint, lime and soda over crushed ice — bright and clean.</p>
+          </div>
+        </article>
+
+        <article class="dish-card reveal">
+          <div class="dish-media">
+            <img src="images/foods/chocolate-lava.svg" alt="Chocolate Lava Cake" loading="lazy" />
+            <span class="dish-tag tag-dessert">Dessert</span>
+          </div>
+          <div class="dish-body">
+            <div class="dish-title-row"><h3>Chocolate Lava Cake</h3><span class="dish-price">₹199</span></div>
+            <p>Warm dark chocolate cake with a molten centre, vanilla scoop.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="view-menu-link reveal">
+        <a href="menu.html" class="btn btn-primary">Explore Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+        <p class="eyebrow">Guest Notes</p>
+        <h2>What our guests say</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card reveal">
+          <div class="testi-quote">“</div>
+          <div class="stars">★★★★★</div>
+          <p class="text">Booked a table for six on the website in under a minute — no back-and-forth calls. The paneer tikka alone is worth the trip.</p>
+          <div class="testi-person">
+            <img class="testi-avatar" src="images/testimonials/ananya.svg" alt="Guest photo" loading="lazy" />
+            <div><strong>Ananya R.</strong><span>Regular Guest</span></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-quote">“</div>
+          <div class="stars">★★★★★</div>
+          <p class="text">The outdoor seating at sunset is unbeatable. Service was warm without being fussy, and the butter chicken is the best in Salem.</p>
+          <div class="testi-person">
+            <img class="testi-avatar" src="images/testimonials/karthik.svg" alt="Guest photo" loading="lazy" />
+            <div><strong>Karthik M.</strong><span>Food Blogger</span></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-quote">“</div>
+          <div class="stars">★★★★★</div>
+          <p class="text">Loved the booking confirmation summary — felt genuinely professional for a neighbourhood restaurant. We'll be back for our anniversary.</p>
+          <div class="testi-person">
+            <img class="testi-avatar" src="images/testimonials/divya.svg" alt="Guest photo" loading="lazy" />
+            <div><strong>Divya S.</strong><span>First-time Guest</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="cta-band reveal">
+      <h3>Hungry already? Reserve your table before the sunset slots fill up.</h3>
+      <a href="booking.html" class="btn btn-gold">Book a Table Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="color:#f0e2cf;">
+          <span class="brand-mark">S</span> Smart Dine
+        </a>
+        <p>A modern neighbourhood restaurant serving seasonal Indian & continental plates, seven days a week.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">X</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="booking.html">Book Table</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon–Fri: 11:00 – 23:00</li>
+          <li>Sat–Sun: 10:00 – 23:30</li>
+          <li>Kitchen closes 30 min prior</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul>
+          <li>4th Cross Street, Salem, TN</li>
+          <li>+91 98765 43210</li>
+          <li>hello@smartdine.example</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Smart Dine. All rights reserved.</span>
+      <span>Built with HTML, CSS & JavaScript.</span>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

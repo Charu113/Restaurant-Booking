@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book a Table | Smart Dine</title>
+<meta name="description" content="Reserve your table at Smart Dine in under a minute. Choose your date, time, seating and party size." />
+<link rel="icon" href="images/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="loader"><div class="loader-plate"></div></div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">S</span> Smart Dine</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="booking.html">Book Table</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="booking.html" class="btn btn-primary" style="padding:12px 22px;">Reserve</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <p class="eyebrow" style="justify-content:center;">Reserve Ahead</p>
+      <h1>Book a Table</h1>
+      <p class="breadcrumb"><a href="index.html">Home</a> / <span>Book Table</span></p>
+    </div>
+  </section>
+
+  <section style="padding-top:60px;">
+    <div class="container booking-wrap">
+
+      <!-- Booking form card -->
+      <div class="booking-card">
+        <h3 style="margin-bottom:26px; font-size:1.5rem;">Reservation Details</h3>
+        <form id="bookingForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-group" id="group-name">
+              <label for="custName">Full Name <span class="req">*</span></label>
+              <input type="text" id="custName" placeholder="e.g. Hasini Kumar" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="form-group" id="group-email">
+              <label for="custEmail">Email Address <span class="req">*</span></label>
+              <input type="email" id="custEmail" placeholder="you@example.com" required>
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" id="group-phone">
+              <label for="custPhone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="custPhone" placeholder="+91 98765 43210" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="form-group" id="group-guests">
+              <label for="guestCount">Number of Guests <span class="req">*</span></label>
+              <input type="number" id="guestCount" min="1" max="20" placeholder="e.g. 4" required>
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" id="group-date">
+              <label for="bookDate">Booking Date <span class="req">*</span></label>
+              <input type="date" id="bookDate" required>
+              <span class="error-msg"></span>
+            </div>
+            <div class="form-group" id="group-time">
+              <label for="bookTime">Booking Time <span class="req">*</span></label>
+              <input type="time" id="bookTime" required>
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-group" id="group-seating">
+            <label>Seating Preference <span class="req">*</span></label>
+            <div class="radio-group">
+              <label class="radio-pill">
+                <input type="radio" name="seating" value="Indoor" required> Indoor
+              </label>
+              <label class="radio-pill">
+                <input type="radio" name="seating" value="Outdoor" required> Outdoor
+              </label>
+            </div>
+            <span class="error-msg"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="specialRequests">Special Requests</label>
+            <textarea id="specialRequests" placeholder="Birthday setup, high chair, allergies, window seat..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Confirm Reservation</button>
+        </form>
+      </div>
+
+      <!-- Side info card -->
+      <div class="info-card">
+        <h3>Good to Know</h3>
+        <ul class="info-list">
+          <li>
+            <span class="info-icon">⏱</span>
+            <div><strong>Hold time</strong><span>Tables are held for 15 minutes past your booking time.</span></div>
+          </li>
+          <li>
+            <span class="info-icon">👥</span>
+            <div><strong>Large groups</strong><span>For parties above 12, call us directly to arrange seating.</span></div>
+          </li>
+          <li>
+            <span class="info-icon">🌿</span>
+            <div><strong>Outdoor seating</strong><span>Weather-dependent; we'll call to confirm on the day.</span></div>
+          </li>
+          <li>
+            <span class="info-icon">📵</span>
+            <div><strong>Cancellations</strong><span>Free to cancel or reschedule up to 2 hours before.</span></div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Booking confirmation modal (glassmorphism ticket) -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-icon">✓</div>
+      <h3>Table Reserved!</h3>
+      <p class="sub">A confirmation has been saved. See your details below.</p>
+
+      <div class="summary-ticket">
+        <div class="summary-row"><span>Booking ID</span><span id="summaryId"></span></div>
+        <div class="summary-row"><span>Name</span><span id="summaryName"></span></div>
+        <div class="summary-row"><span>Date</span><span id="summaryDate"></span></div>
+        <div class="summary-row"><span>Time</span><span id="summaryTime"></span></div>
+        <div class="summary-row"><span>Guests</span><span id="summaryGuests"></span></div>
+        <div class="summary-row"><span>Seating</span><span id="summarySeating"></span></div>
+        <div class="summary-row"><span>Phone</span><span id="summaryPhone"></span></div>
+      </div>
+
+      <a href="index.html" class="btn btn-primary btn-block">Back to Home</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" style="color:#f0e2cf;"><span class="brand-mark">S</span> Smart Dine</a>
+        <p>A modern neighbourhood restaurant serving seasonal Indian & continental plates, seven days a week.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">X</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="booking.html">Book Table</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul><li>Mon–Fri: 11:00 – 23:00</li><li>Sat–Sun: 10:00 – 23:30</li><li>Kitchen closes 30 min prior</li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul><li>4th Cross Street, Salem, TN</li><li>+91 98765 43210</li><li>hello@smartdine.example</li></ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Smart Dine. All rights reserved.</span>
+      <span>Built with HTML, CSS & JavaScript.</span>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+  <script src="js/script.js"></script>
+</body>
+</html>

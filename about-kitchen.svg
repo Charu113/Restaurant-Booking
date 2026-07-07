@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 820" width="700" height="820">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a2c3c"/>
+      <stop offset="100%" stop-color="#5c1c27"/>
+    </linearGradient>
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2" fill="rgba(255,255,255,0.08)"/>
+    </pattern>
+  </defs>
+  <rect width="700" height="820" fill="url(#g)"/>
+  <rect width="700" height="820" fill="url(#dots)"/>
+  <circle cx="580" cy="120" r="200" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="90" cy="720" r="220" fill="rgba(0,0,0,0.10)"/>
+  <!-- simple fork & knife glyph -->
+  <g transform="translate(350,380)" fill="rgba(248,234,217,0.85)">
+    <rect x="-60" y="-160" width="10" height="320" rx="5"/>
+    <rect x="-90" y="-160" width="8" height="90" rx="4"/>
+    <rect x="-74" y="-160" width="8" height="90" rx="4"/>
+    <rect x="-58" y="-160" width="8" height="90" rx="4"/>
+    <path d="M40,-160 C75,-160 85,-110 60,-70 C50,-55 45,-40 45,-20 L45,160 L25,160 L25,-20 C25,-40 20,-55 10,-70 C-15,-110 -5,-160 30,-160 Z" transform="translate(60,0)"/>
+  </g>
+  <text x="50%" y="93%" text-anchor="middle" font-family="Georgia, serif" font-size="30"
+        font-weight="700" fill="#f8ead9">Smart Dine Kitchen</text>
+</svg>
